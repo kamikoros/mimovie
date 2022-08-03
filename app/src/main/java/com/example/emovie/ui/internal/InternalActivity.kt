@@ -50,7 +50,6 @@ class InternalActivity : AppCompatActivity() {
          binding.voteAverage.text = "${BigDecimal(detail.vote_average).setScale(1, BigDecimal.ROUND_HALF_UP).toString()} (${detail.vote_count} Reviews) "
          binding.releaseDate.text = "Released ${detail.release_date}"
          binding.overview.text =  detail.overview
-        //binding.genres.text = viewModel.txtGenres(detail.genres)
     }
 
 }
