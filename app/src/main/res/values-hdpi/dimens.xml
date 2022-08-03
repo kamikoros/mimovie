@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="sizedLarge">18sp</dimen>
+    <dimen name="mediumSize">12sp</dimen>
+    <dimen name="smallSize">8sp</dimen>
+    <dimen name="sizeIcon">17dp</dimen>
+    <dimen name="mediumSize2">16sp</dimen>
+    <dimen name="imgWidh">90dp</dimen>
+    <dimen name="imgHeight">150dp</dimen>
+</resources>

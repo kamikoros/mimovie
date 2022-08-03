@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="sizedLarge">20sp</dimen>
+    <dimen name="mediumSize">16sp</dimen>
+    <dimen name="smallSize">12sp</dimen>
+    <dimen name="sizeIcon">25dp</dimen>
+    <dimen name="mediumSize2">20sp</dimen>
+    <dimen name="imgWidh">150dp</dimen>
+    <dimen name="imgHeight">200dp</dimen>
+
+</resources>
