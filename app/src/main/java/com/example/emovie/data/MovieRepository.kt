@@ -9,7 +9,7 @@ import javax.inject.Inject
 class MovieRepository  @Inject constructor( private val api:MovieService){
     suspend fun getAllMovie(typeCategory: TypeCategory): Data?{
         return when(typeCategory){
-            TypeCategory.upComing  -> api.get()
+            TypeCategory.upComing  -> api.getUpComing()
             TypeCategory.topRated  -> api.getTopReted()
             TypeCategory.popular   -> api.getPopular()
         }

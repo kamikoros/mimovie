@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.emovie.data.model.Genres
 import com.example.emovie.data.model.MovieDetail
 import com.example.emovie.domain.GetDetailMovie
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -32,14 +31,6 @@ class InternalViewModel @Inject constructor(private val getDetail:GetDetailMovie
                 detail.postValue(data)
             }
         }
-    }
-
-    fun txtGenres(data:List<Genres>):String{
-        var txt = ""
-         data.takeLast(4).forEach {
-            txt+="  ${it.name}  *"
-         }
-        return if (txt.isNotBlank()) txt.dropLast(1) else ""
     }
 
 

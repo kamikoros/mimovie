@@ -1,7 +1,6 @@
 package com.example.emovie.domain
 
 import com.example.emovie.data.MovieRepository
-import com.example.emovie.data.model.Genres
 import com.example.emovie.data.model.MovieDetail
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
@@ -37,13 +36,14 @@ internal class GetDetailMovieTest{
         val detail = MovieDetail(
             id = 10,
             overview = "hola mundo",
-            genres = arrayListOf(),
             original_language = "es",
             original_title = "hola mundo",
             poster_path = "",
             release_date = "",
             title = "",
-            vote_average = ""
+            vote_average = "",
+            backdrop_path = "",
+            vote_count = ""
         )
         coEvery { movieRepository.getDetail(id) } returns detail
 
@@ -53,27 +53,6 @@ internal class GetDetailMovieTest{
     }
 
 
-
-    @Test
-    fun `when api returns MovieDetail, check if genre list is not empty`() = runBlocking {
-        val id= 10
-        val detail = MovieDetail(
-            id = 10,
-            overview = "hola mundo",
-            genres =  listOf(Genres(1, "Aventura")),
-            original_language = "es",
-            original_title = "hola mundo",
-            poster_path = "",
-            release_date = "",
-            title = "",
-            vote_average = ""
-        )
-        coEvery { movieRepository.getDetail(id) } returns detail
-
-        val response = getDetailMovie(id)!!.genres
-
-        assert(response.isNotEmpty())
-    }
 
 
 

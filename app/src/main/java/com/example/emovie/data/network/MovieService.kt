@@ -7,7 +7,7 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class MovieService @Inject constructor(val api:MovieApiClient) {
-    suspend fun get(): Data? {
+    suspend fun getUpComing(): Data? {
         return withContext(Dispatchers.IO) {
             val response = api.getAllUpComing(Config.apiKey)
             response.body()

@@ -6,9 +6,6 @@ data  class MovieDetail(
     @SerializedName("id")
     val id: Int,
 
-    @SerializedName("genres")
-    val genres: List<Genres>,
-
     @SerializedName("original_title")
     val original_title: String,
 
